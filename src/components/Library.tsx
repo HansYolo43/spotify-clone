@@ -5,11 +5,13 @@ import { AiOutlinePlus } from "react-icons/ai";
 import useAuthModal from "@/hooks/useAuthModal";
 import { useUser } from "@/hooks/useUser";
 import useUploadModal from "@/hooks/useUploadModal";
+import useMultiUploadModal from "@/hooks/useMultiUploadModal";
 
 
 const Library = () => {
 
     const { user } = useUser();
+    const multiUploadModal = useMultiUploadModal();
     const uploadModal = useUploadModal();
     const authModal = useAuthModal();
 
@@ -20,7 +22,9 @@ const Library = () => {
         authModal.onOpen();
       } else {
 
-        return uploadModal.onOpen();
+        return multiUploadModal.onOpen();
+
+        // return uploadModal.onOpen();
       }
   };
 
