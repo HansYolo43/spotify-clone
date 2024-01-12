@@ -46,10 +46,10 @@ const MultiUploadModal = () => {
     };
     
 
-    const onSongUpload = async (link: String) => {
+    const onSongUpload:any = async (link: String) => {
     }
 
-    const onPlaylistUpload = async (link: String) => {
+    const onPlaylistUpload:any = async (link: String) => {
     }
 
   return (
